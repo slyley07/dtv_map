@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DTV Now Local Channels</title>
+  <meta name="description" content="DirecTV Now Map of Local Channels">
+  <meta name="author" content="Bradley Showalter">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Demo scripts -->
+  <!-- <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet" type="text/css" /> -->
+
+  <!-- <style type="text/css">
+    /* html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: 'Droid Sans', sans-serif;
+      background:#f2f2f2;
+      font-size:14px;
+      line-height:21px;
+    } */
+
+
+
+  </style> -->
+  <!-- End Demo scripts -->
+
+  <!-- Jquery is required, embed on your page if not already - don't embed 2 versions -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <!-- End Jquery -->
+
+  <!-- Map scripts - add the below to your page -->
+  <!-- jsmaps-panzoom.js is optional if you are using enablePanZoom -->
+  <link href="jsmaps/jsmaps.css" rel="stylesheet" type="text/css" />
+  <script src="jsmaps/jsmaps-libs.js" type="text/javascript"></script>
+  <script src="jsmaps/jsmaps.js" type="text/javascript"></script>
+  <script src="maps/usa.js" type="text/javascript"></script>
+  <!-- <script src="jsmaps/jsmaps-panzoom.js"></script> -->
+  <!-- End Map scripts -->
+
+</head>
+<body>
+
+  <div class="container" id='container'>
+
+    <!-- Map html - add the below to your page -->
+    <div class="jsmaps-wrapper" id="usa-map"></div>
+
+    <p class='outerSearch'>
+      Looking for your RSNs? Click
+      <a href="http://www.directv.com/DTVAPP/packProg/attLocalChannels.jsp?assetId=att_cms_local_channels&_requestid=4935914" class="search-button" target="_blank">
+        <!-- Click to search for your city -->
+        here.
+      </a>
+    </p>
+    <!-- End Map html -->
+
+
+
+    <div id="jsmaps-accordian"></div>
+  </div>
+
+
+  <!-- UNCOMMENT THIS TO ADD IN NEW CITIES -->
+  <!-- <h2>
+    Cities
+  </h2>
+  <textarea id="cities"></textarea>
+
+  <h2>
+    States
+  </h2>
+  <textarea id="states"></textarea> -->
+
+  <script type="text/javascript">
+
+    $(function() {
+      console.log('js loading?');
+      $('#usa-map').JSMaps({
+        map: 'usa'
+      });
+
+    });
+
+  </script>
+
+  <!-- UNCOMMENT THIS TO ADD IN NEW CITIES -->
+  <!-- <script src="./roll-roll-roll.js"></script> -->
+</body>
+</html>
